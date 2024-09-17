@@ -13,6 +13,7 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 ## Reflection Questions
 
 1. What is your initial thoughts about the python programming language?
+    My initial thoughts on the python programming language is that it's pretty difficult to understand when someone is first trying to learn it. I haven't worked a lot with coding in general so learning python has been a little bit of a challenge.
 
 
 

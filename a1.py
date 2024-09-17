@@ -25,7 +25,11 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    # if n < 0:
+    #   return -1 * n
+    # else:
+    #   return n
+    return -1 *n if n < 0 else n 
 
 
 def factorial(n: int) -> int:
@@ -38,7 +42,7 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    
 
 
 T = TypeVar("T")
@@ -80,7 +84,15 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    # if List:
+    #   s =sum_list(List)
+    #   # print(s)
+    #   num_el = len(list)
+    #   # print(num_el)
+    #   return s / num_el
+    # else: 
+    #   return 0
+    return sum_list(lst) / len(lst) if lst else 0
 
 
 def median(lst: List[int]) -> float:
@@ -122,7 +134,9 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
+    assert absolute(1) == 1, "absolute of 1 failed"
     assert absolute(-1) == 1, "absolute of -1 failed"
+    
     assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
@@ -131,7 +145,10 @@ if __name__ == "__main__":
     ], "every_other of [1,2,3,4,5] failed"
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
+    assert mean([1, 2, 3, 4, 5, 6]) == 3.5, "mean of [1,2,3,4,5,6] failed"
+    assert mean([]) == 0, "mean of [] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
+    assert median([1, 2, 3, 4, 5,6]) == 3.5, "median of [1,2,3,4,5,6] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
