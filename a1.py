@@ -42,7 +42,14 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    
+    # 4! = 4 * 3 * 2 * 1 = 24
+    # 5! = 5 * 4 * 3 * 2 * 1 = 120
+    # 0! = 1
+    result = 1
+    for x in range(1, n + 1):
+        result *= x     # same as the result = result * x
+        # print(result)
+    return result
 
 
 T = TypeVar("T")
@@ -59,7 +66,15 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    # Java mathod
+    # new_lst = []
+    # for i in range(0,len(lst),2):
+    #   # print(lst[i])
+    # return new_lst
+
+    # python method
+    return lst[::2]
+
 
 
 def sum_list(lst: List[int]) -> int:
@@ -72,7 +87,11 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    s = 0
+    for el in lst:
+        s += el
+    return s
+
 
 
 def mean(lst: List[int]) -> float:
@@ -138,6 +157,9 @@ if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     
     assert factorial(4) == 24, "factorial of 4 failed"
+    assert factorial(5) == 120, "factorial of 5 failed"
+    assert factorial(0) == 1, "factorial of 0 failed"
+    
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
         3,
