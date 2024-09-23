@@ -154,7 +154,14 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    i = 0
+    current = "duck1"
+    while   len(lst) > 2:
+        if current == "duck1":
+            i += 1
+        elif current == "duck2":
+            i += 1
+
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
@@ -182,3 +189,5 @@ if __name__ == "__main__":
     assert duck_duck_goose(names) == ["roscoe", "law"]
 
     print("All tests passed!")
+
+    
