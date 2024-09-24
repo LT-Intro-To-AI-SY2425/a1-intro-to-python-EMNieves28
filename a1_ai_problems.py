@@ -38,9 +38,9 @@ assert fibonacci_sequence(7) == 13, "Test case 7 failed"
 
 print("All test cases passed :)")
 
-def sum_of_digits(num):
-        # Convert the number to string and remove any negative signs
-        num_str = str(abs(num))
+def sum_of_digits(n):
+        # Convert the number to a string and remove any negative signs
+        num_str = str(abs(n))
         total = 0
 
         for char in num_str:
@@ -48,4 +48,21 @@ def sum_of_digits(num):
 
         return total 
     
-number = int(input("Enter an integer: "))
+number = int(input("Enter an integer:"))
+
+result = sum_of_digits(number)
+
+print(f"The sum of the digits in {number} is {result}.")
+
+
+
+def reverse_string(input_string):
+    return input_string[::-1]
+
+result = reverse_string("Hello,world!")
+print(result) #output: !dlrow ,olleH
+
+assert reverse_string("Hello, world") == "!dlrow ,olleH"
+assert reverse_string("12345") == "54321"
+
+print("all tests passed!")
